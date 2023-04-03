@@ -1,0 +1,3 @@
+function nowname() {
+    return
+}
