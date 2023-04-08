@@ -72,19 +72,46 @@
 
 
 
-// всплытие и погружение
-const block = document.querySelector(".block");
-const blockInner = document.querySelector(".block__iner");
-const blockInnerInner = document.querySelector(".block__inner-inner");
-// Всплытие : когда на элемете происходит событие, обработчики 
-// сначала срабатывают на нём, потом на его родителе, 
-// затем выше и так далее, вверх по цепочке предков.
-block.addEventListener("click", function (event) {
-    console.log('Клик на блок!' );
-});
-blockInner.addEventListener("click", function(event) {
-    console.log('Клик на блок второго уровня!');
-});
-blockInnerInner.addEventListener("click", function(event) {
-    console.log('Клик на блок третьего уровня!');
-});g
+// // всплытие и погружение
+// const block = document.querySelector(".block");
+// const blockInner = document.querySelector(".block__iner");
+// const blockInnerInner = document.querySelector(".block__inner-inner");
+// // Всплытие : когда на элемете происходит событие, обработчики 
+// // сначала срабатывают на нём, потом на его родителе, 
+// // затем выше и так далее, вверх по цепочке предков.
+// block.addEventListener("click", function (event) {
+//     console.log('Клик на блок!' );
+// });
+// blockInner.addEventListener("click", function(event) {
+//     console.log('Клик на блок второго уровня!');
+// });
+// blockInnerInner.addEventListener("click", function(event) {
+//     console.log('Клик на блок третьего уровня!');
+//     // Остановка всплытия
+//     event.stopPropagation();
+// });
+
+
+// // Делегирование событий
+// const lesson = document.querySelector('.lesson');
+
+// function showConsole() {
+//     console.log('Ура!');
+// }
+// lesson.addEventListener("click", function (event)) {
+//     if (event.target.closest('.button')) {
+//         showConsole();
+//     }
+// }
+
+
+// const menuBody = document.querySelector('.menu');
+// document.addEventListener('click', menu);
+// function menu(event) {
+//     if(event.target.closest('.menu__button')) {
+//         menuBody.classList.toggle('_active');       
+//     }
+//     if (!event.target.closest('.menu')) {
+//         menuBody.classList.remove('_active');
+//     }
+// }
