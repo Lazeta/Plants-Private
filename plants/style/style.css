@@ -159,7 +159,7 @@ li,p {
     margin-left: -20px;}
 
 /* burger */
-.menu__icon {
+.burger__menu {
     display: none; 
 }
 
@@ -1297,7 +1297,7 @@ li,p {
     .welcome {
         max-width: 768px;
         width: auto;
-        height: auto;
+        height: 300px;
         padding-left: 50px;
         background: #EDF2EC;
     }
@@ -1370,7 +1370,7 @@ li,p {
         justify-content: space-between;
         flex-direction: column;
         margin: 0 0 0 0;
-        padding: 0 50px 0 0px;
+        padding: 34px 50px 0 0px;
         
     }
     .about__content {
@@ -1409,17 +1409,17 @@ li,p {
     
     /* service section style*/
     .service {
-        margin-top: 12px;
         max-width: 768px;
         width: auto;
         height: auto;
+        margin-top: 12px;
+        margin-bottom: -20px;
         background: #EDF2EC;
-        margin-bottom: 0px;
     }
     .services__bar {
         width: auto;
         height: auto;
-        padding: 48px 0 30px 50px;
+        padding: 82px 0 30px 50px;
         display: flex;
         flex-direction: column;
         justify-content: none;
@@ -1539,7 +1539,7 @@ li,p {
     .prices__container {
         width: 230px;
         height: auto;
-        padding: 0;
+        padding: 20px 0 0 0;
         display: inline-flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -1549,6 +1549,8 @@ li,p {
     .prices__bar {
         width: 382px;
         height: auto;
+        margin: 0;
+        padding: 0px 0 0 0;
     }
     .prices__bar h2 {
         padding-bottom: 0px;
@@ -1668,13 +1670,13 @@ li,p {
         position: relative;
         max-width: 380px;
         width: 384px;
-        height: 445px;
+        height: 444px;
         background: #EDF2EC;
     }
     .contact__container {
         width: 380px;
         height: 490px;
-        padding: 0px;
+        padding: 21px 0 0 0;
     }
     .box-city {
         width:300px;
@@ -1703,7 +1705,7 @@ li,p {
         width: 100px;
         height: 124.25px;
         left: 139px;
-        top: 298px;
+        top: 320px;
     }
     .contacts__button {
         width: 250px;
@@ -1754,7 +1756,7 @@ li,p {
     .content {
         margin-top: -10px;
         margin-bottom: 0px;
-        padding: 0px 0px 0px 2px;
+        padding: 20px 0px 0px 2px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1819,34 +1821,35 @@ li,p {
     }
 }
 @media (max-width: 767px) {
-    .menu__icon {
+    .burger__menu {
         z-index: 5; 
+        margin-top: -23px; /* двигаю бургер меню выше на уровень "Plants" лого */
         display: block;
-        position: relative;
-        width: 30px;
-        height: 18px;
+        position: absolute;
+        width: 40px;
+        height: 24px;
         cursor: pointer;
     }
-    .menu__icon span,
-    .menu__icon::before,
-    .menu__icon::after {
-        left: 0;
+    .burger__menu span,
+    .burger__menu::before,
+    .burger__menu::after {
+        left: 290px;
         position: absolute;
         height: 10%;
         width: 100%;transition: all 0.3s ease 0s;
-        background-color: #fff;
+        background-color: #717171;
     }
-    .menu__icon::before,
-    .menu__icon::after {
+    .burger__menu::before,
+    .burger__menu::after {
         content: "";
     }
-    .menu__icon::before {
-        top: 0;
+    .burger__menu::before {
+        top: 11px;
     }
-    .menu__icon::after {
-        bottom: 0;
+    .burger__menu::after {
+        bottom: 2px;
     }
-    .menu__icon span {
+    .burger__span {
         top: 50%;
         transform: scale(1) translate(0px, -50%);
         

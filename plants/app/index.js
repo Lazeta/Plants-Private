@@ -1,3 +1,21 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const button = document.querySelector('.city__bar');
 
 // // button.onclick = function () {
@@ -10,7 +28,7 @@
 // }
 // button.onclick = showConsole;
 
-// минус вышеупомянутых методов невозможность вызова нескольких обработчиков
+// // минус вышеупомянутых методов невозможность вызова нескольких обработчиков
 
 
 // const button = document.querySelector('.city__bar');
@@ -30,8 +48,8 @@
 // });
 
 
-// устанавливаем обработчик и его сразу же удаление чтобы действие 
-// больше не повторялось.
+// // устанавливаем обработчик и его сразу же удаление чтобы действие 
+// // больше не повторялось.
 // const button = document.querySelector('.city__bar');
 // function showConsole() {
 //     console.log('Клик!');
