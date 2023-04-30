@@ -1,19 +1,98 @@
+// class ItcModal {
+//     #template = '<div class="itc-modal-backdrop"><div class="itc-modal-content"><div class="itc-modal-header"><div class="itc-modal-title">{{title}}</div><span class="itc-modal-btn-close" title="Закрыть">×</span></div><div class="itc-modal-body">{{content}}</div>{{footer}}</div></div>';
+//     // ...
+// }
+// const modal = new ItcModal({
+//     title: 'Заголовок',
+//     content: '<div>Содержимое модального окна...</div>',
+//     footerButtons: [
+//         { class: 'btn btn-close', text: 'Закрыть', action: 'close'},
+//     ]
+// });
 
+const bodyElement = document.body;
+// const lastElement = bodyElement.lastChild;
+// console.log(lastElement)
+// const childNodes = bodyElement.childNodes;
+// console.log(childNodes)
+// console.log(bodyElement.hasChildNodes());
+// for (let node of childNodes) {
+//     console.log(node);
+// }
+// const bodyChildren = bodyElement.children;
+// console.log(bodyChildren)
 
+// const previousSiblingNode = bodyElement.previousSibling; // обращение к предыдущему узлу объекта
+// const nextSiblingNode = bodyElement.nextSibling; // обращение к следующему узлу объекта
+// const parentNode = bodyElement.parentNode; // обращение к непосредственному родителю узла
+// console.log(previousSiblingNode);
+// console.log(nextSiblingNode);
+// console.log(parentNode);
 
+// Первый и последний дочерние элементы
+const firstChild = bodyElement.firstElementChild; 
+const lastChild = bodyElement.lastElementChild;
+// console.log(firstChild)
+// console.log(lastChild)
 
+const previousSibling = bodyElement.previousElementSibling;
+const nextSibling = bodyElement.nextElementSibling;
+const parentElement = bodyElement.parentElement;
+// console.log(previousSibling)
+// console.log(nextSibling)
+// console.log(parentElement)
 
+// Поиск по селектору класса
+const elemsOne = document.querySelectorAll('.burger__menu');
+// console.log(elemsOne)
+// Поиск по селектору тега
+const elemsTwo = document.querySelectorAll('li');
+// console.log(elemsTwo)
+// Поиск по смешанному селектору тега и класса
+const elemsThree = document.querySelectorAll('li.about-us__item');
+// console.log(elemsThree)
+// Поиск по тегу первого уровня вложенности
+const elemsFour = document.querySelectorAll('.nav-menu>li');
+// console.log(elemsFour)
+// Поиск по нескольким классам
+const elemsFive = document.querySelectorAll('.burger__menu, .welcome__container');
+// console.log(elemsFive)
+// Поиск по вложенным классам
+const elemsSix = document.querySelectorAll('.welcome__container .welcome__container__img');
+// console.log(elemsSix)
+// Поиск по ID
+const elemsSeven = document.querySelectorAll('#Home');
+// console.log(elemsSeven)
+// Поиск по атрибуту в html абсолютно любым может быть атрибут к которому мы можем обратиться <li data-item="40"></li>
+const elemsEight = document.querySelectorAll('[data-item]');
+// console.log(elemsEight)
+// Поиск по атрибуту со значением
+const elemsNine = document.querySelectorAll('[data-item="40"]');
+// console.log(elemsNine)
 
+// const elems = document.querySelectorAll('li'); // присваиваем переменной значение коллекции объекта по тегу li
+// console.log(elems[2]); // вызываем элемент по индексу из коллекции объекта
+// for (const item of elems) {
+//     console.log(item);
+// }
+// // так же работает метод forEach хотя это и не массив, но работает
+// elems.forEach(item => {
+//     console.log(item);
+// });
 
+// Ищем теги li только внутри коллекции nav-menu
+const subList = document.querySelectorAll('.nav-menu')
+const subItems = subList[0].querySelectorAll('li');
+// console.log(subItems)
 
+// Ищет один конкретный объект без необходимости получать коллекцию объекта
+const burgerItem = document.querySelector('.nav-menu');
+console.log(burgerItem)
 
-
-
-
-
-
-
-
+// Если у элемента есть атрибут id, 
+// то мы можем получить его вызовом getElementById(id), где бы он ни находился.
+const elem = document.getElementById('About-us')
+console.log(elem)
 
 
 // const button = document.querySelector('.city__bar');

@@ -661,27 +661,18 @@ li,p {
         padding-left: 10px;
         margin-left: -20px;
         color: #E06733;}
-    .about-us__item a {
-        }
     .about-us__item a:hover {
         padding-right: 10px;
         padding-left: 10px;
         margin-left: -20px;}
-    .service-__item a {
-        }
     .service-__item a:hover {
         padding-right: 10px;
         padding-left: 10px;
         margin-left: -20px;}
-    .price__item a {
-    }
     .price__item a:hover {
         padding-right: 10px;
         padding-left: 10px;
         margin-left: -20px;}
-    .contacts__item a{
-    
-    }
     .contacts__item a:hover {
         padding-right: 10px;
         padding-left: 10px;
@@ -1011,8 +1002,6 @@ li,p {
         height: 490px;
         padding: 205px 0 0 0;
     }
-    .box-city {
-    }
     .contact-us-h2 {
         width: 200px;
         height: 248.49px;
@@ -1036,9 +1025,6 @@ li,p {
         height: 248.49px;
         left: 294px;
         top: 4184px;
-    }
-    .contact__container img {
-        
     }
     .city__bar {
         width: 450px;
@@ -1260,27 +1246,18 @@ li,p {
         padding-left: 10px;
         margin-left: -20px;
         color: #E06733;}
-    .about-us__item a {
-        }
     .about-us__item a:hover {
         padding-right: 10px;
         padding-left: 10px;
         margin-left: -20px;}
-    .service-__item a {
-        }
     .service-__item a:hover {
         padding-right: 10px;
         padding-left: 10px;
         margin-left: -20px;}
-    .price__item a {
-    }
     .price__item a:hover {
         padding-right: 10px;
         padding-left: 10px;
         margin-left: -20px;}
-    .contacts__item a{
-    
-    }
     .contacts__item a:hover {
         padding-right: 10px;
         padding-left: 10px;
