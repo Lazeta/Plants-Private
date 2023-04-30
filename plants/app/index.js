@@ -1,15 +1,3 @@
-// class ItcModal {
-//     #template = '<div class="itc-modal-backdrop"><div class="itc-modal-content"><div class="itc-modal-header"><div class="itc-modal-title">{{title}}</div><span class="itc-modal-btn-close" title="Закрыть">×</span></div><div class="itc-modal-body">{{content}}</div>{{footer}}</div></div>';
-//     // ...
-// }
-// const modal = new ItcModal({
-//     title: 'Заголовок',
-//     content: '<div>Содержимое модального окна...</div>',
-//     footerButtons: [
-//         { class: 'btn btn-close', text: 'Закрыть', action: 'close'},
-//     ]
-// });
-
 // const bodyElement = document.body;
 // const lastElement = bodyElement.lastChild;
 // console.log(lastElement)
@@ -219,7 +207,7 @@
 // textElement.append(newElement);
 
 // textElement.append(newElement, "Привет!");
-// можно вставить обычную строку(текст) таким же способом
+// // можно вставить обычную строку(текст) таким же способом
 // textElement.append(`Живи, а работай в 
 //     <span class="blue">свободное</span> время!`);
 
@@ -297,11 +285,122 @@ afterend - вставить html непосредственно после textE
 // const lessonBlock = document.querySelector('.lesson');
 // lessonBlock.append(cloneTextElement);
 
-// // удаление узлов
-// // удаляет полностью объект
+// // // удаление узлов
+// // // удаляет полностью объект
 // textElement.remove();
 
+// const element = document.querySelector('.lesson__item-list_red');
+// // получаем имена классов
+// const elementClassNames = element.className;
+// console.log(elementClassNames);
+// // перезаписываем имя класса
+// element.className = "red";
 
+// const element = document.querySelector('.lesson__item-list_red');
+// // добавить класс
+// element.classList.add('active');
+// // удалить класс
+// element.classList.remove('active');
+// // добавить класс, если его нет, а если есть удалить.
+// element.classList.toggle('active');
+// // проверка наличия класса, возвращает true/false.
+// element.classList.contains('active');
+
+// const element = document.querySelector('.lesson__item-list_red');
+// element.classList.add('active');
+// // проверяем наличие класса
+// if (element.classList.contains('active')) {
+//     console.log(`У element есть класс active!`)
+// }
+
+// const element = document.querySelector('.lesson__item-list_red');
+// // задаём стиль с помощью CSS свойства
+// element.style.color = "red";
+// // для свойства из нескольких слов используется camelCase:
+// // margin-bottom
+// element.style.marginBottom = "30px";
+// // z-index
+// element.style.zIndex = "10px";
+// // и т.д.
+// // каждое свойство пишется отдельно
+// console.log(element.style.marginBottom);
+// сброс атрибута CSS
+// element.style.marginBottom = "";
+
+// // для записи нескольких стиле удобно использовать style.cssText = `...`
+// const element = document.querySelector('.lesson__item-list_red');
+// element.style.cssText = `
+//     margin-bottom: 30px;
+//     color: red;
+// `;
+// нюанс - перезаписывает все css свойства что были ранее в данному атрибуте style
+
+// // вычисленные стили. getComputedStyle(element, [pseudo])
+// const element = document.querySelector('.lesson__item-list_red');
+// // получение значения свойства
+// // только если оно записано в атрибуте style
+// console.log(element.style.fontSize);
+// // стиль элемента
+// const elementStyle = getComputedStyle(element);
+// console.log(elementStyle.fontSize);
+
+// const element = document.querySelector('.lesson__item-list_red');
+// const elementBeforeStyle = getComputedStyle(element, "::before");
+// console.log(elementBeforeStyle.backgroundColor);
+
+// // как получить число из вывода строки цифр и с символами которые могли бы приравнятся к числу
+// const element = document.querySelector('.lesson__item-list_red');
+// const elementStyle = getComputedStyle(element);
+// const paddingLeft = parseInt(elementStyle.paddingLeft);
+// console.log(paddingLeft);
+// не забываем указывать в значении единицы измерения и в кавычках.
+// element.style.marginLeft = "20px";
+
+// const link = document.querySelector('.lesson__link');
+// const input = document.querySelector('.lesson__input');
+// console.log(link.href);
+// console.log(input.href);
+// console.log(input.value);
+// console.log(link.value);
+// // получить список доступных свойств
+// console.dir(link);
+
+// const lessonText = document.querySelector('.lesson__text');
+// // проверяем наличие атрибута.
+// lessonText.hasAttribute('name');
+// // получаем значение атрибута.
+// lessonText.getAttribute('name');
+// // устанавливаем значение атрибута.
+// lessonText.setAttribute('name', 'value');
+// // удаляем атрибут
+// lessonText.removeAttribute('name');
+
+// // практическое применение методов работы с атрибутами
+// const lessonText = document.querySelector('.lesson__text');
+// lessonText.setAttribute('some-attribute', 'some-value');
+// // проверяем наличие атрибута
+// if (lessonText.hasAttribute('some-attribute')) {
+//     console.log('some-attribute существует!');
+// }
+
+// const input = document.querySelector('.lesson__input');
+// input.setAttribute('id', '123');
+// console.log(input.id);
+// input.id = "321";
+// console.log(input.getAttribute('id'));
+
+// const lessonText = document.querySelector('.lesson__text');
+// // получаем data-атрибут
+// console.log(lessonText.dataset.size);
+// // перезаписываем значение data-атрибута
+// lessonText.dataset.size = "5810"; 
+// console.log(lessonText.dataset.size);
+
+// // получаем тег элемента
+// console.log(link.tagName);
+// // скрыть/показать элемент
+// link.hidden = true;
+// console.log(link.hidden);
 
 
 
