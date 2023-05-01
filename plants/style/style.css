@@ -76,6 +76,20 @@ li,p {
     background-color:rgba(0, 0, 0, 0);
 }
 
+
+/* button changed background color */
+.change__button {
+    position: absolute;
+    width: 65px;
+    right: 160px;
+    top: 50px;
+    color: darkred;
+    border-color:#636060;
+    border-radius: 10px;
+    border-style:double;
+}
+
+
 /* header style */
 .header {
     max-width: 1440px;
@@ -550,7 +564,20 @@ li,p {
     background-color: #E06733;
     color:#ffffff;
 }
+@media (max-width: 1900px){
+    /* button changed background color */
+    .change__button {
+        position: absolute;
+        right: 10px;
+    }
+}
 
+@media (max-width: 1440px){
+    /* button changed background color */
+    .change__button {
+        display: none;
+    }
+}
 
 @media (max-width: 768px) {
     * {
@@ -600,6 +627,11 @@ li,p {
     .container {
         margin: 0 auto;
         background-color:rgba(0, 0, 0, 0);
+    }
+
+    /* button changed background color */
+    .change__button {
+        display: none;
     }
 
     /* header style */
