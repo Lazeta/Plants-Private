@@ -1,4 +1,6 @@
-const btn = document.querySelector('.changer');
+// функция смены цвета заднего фона на размерах от 1440 пикселей более.
+// function changed color theme on size from 1440px and more.
+const btn = document.querySelector('.__changer');
 function random(number){
     return Math.floor(Math.random() * (number+1))
 };
@@ -9,12 +11,46 @@ btn.onclick = function(){
 
 
 
-// const button = document.querySelector('.city__bar');
 
-// // button.onclick = function () {
-// //     console.log('Click!');
-// // }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const button = document.querySelector('.btn');
+
+// button.onclick = function () {
+//     console.log('Click!');
+// }
+// const button = document.querySelector('#submit');
+// button.onclick = function(){ 
+//     alert('Вы нажали на кнопку!')
+// }
 
 // function showConsole() {
 //     console.log('Click!');

@@ -173,9 +173,9 @@ li,p {
     margin-left: -20px;}
 
 /* burger */
-.burger__menu {
+/* .burger__menu {
     display: none; 
-}
+} */
 
 
 /* main style */
@@ -1831,9 +1831,8 @@ li,p {
 }
 @media (max-width: 767px) {
     .burger__menu {
-        z-index: 5; 
-        margin-top: -23px; /* двигаю бургер меню выше на уровень "Plants" лого */
-        display: block;
+        z-index: 10; 
+        display:inline-block;
         position: absolute;
         width: 40px;
         height: 24px;
@@ -1853,10 +1852,10 @@ li,p {
         content: "";
     }
     .burger__menu::before {
-        top: 11px;
+        top: 5px;
     }
     .burger__menu::after {
-        bottom: 2px;
+        bottom: 5px;
     }
     .burger__span {
         top: 50%;
