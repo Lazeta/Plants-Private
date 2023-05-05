@@ -1,10 +1,10 @@
 // функция смены цвета заднего фона на размерах от 1440 пикселей более.
 // function changed color theme on size from 1440px and more.
-const btn = document.querySelector('.__changer');
+const btnColor = document.querySelector('.__changer');
 function random(number){
     return Math.floor(Math.random() * (number+1))
 };
-btn.onclick = function(){
+btnColor.onclick = function(){
     const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
     document.body.style.backgroundColor = rndCol;
 };
@@ -19,10 +19,28 @@ burgerMenu.addEventListener("click", () => {
 
 
 // будем скрывать режим бургер меню если кликать вне списка за его пределами.
-// const popup = document.querySelector(".__burger__menu");
+const btnMenu = document.querySelector(".btn__Menu");
+const menu = document.querySelector(".menu");
+const toggleMenu = function () {
+    menu.classList.toggle("open");
+}
 
-// document.onclick = function (e) {
-//     if (e.target.className != ".__burger__menu") {
-//         popup.style.display = "none";
-//     };
-// };
+btnMenu.addEventListener("click", function (e) {
+    e.stopPropagation();
+    toggleMenu();
+});
+
+document.addEventListener("click", function (e) {
+    const target = e.target;
+    const its_menu = target == menu || menu.contains(target);
+    const its_btnMenu = target == btnMenu;
+    const menu_is_active = menu.classList.contains("open");
+
+    if (!its_menu && !its_btnMenu && menu_is_active) {
+        toggleMenu();
+    }
+});
+
+
+// написать скрипт кнопки что будет возвращать пользователей к шапке по 
+// id="Header" и исчезать когда пользователь находится в верху страницы.

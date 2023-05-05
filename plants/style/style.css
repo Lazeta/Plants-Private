@@ -564,6 +564,15 @@ li,p {
     background-color: #E06733;
     color:#ffffff;
 }
+.menu {
+    visibility: hidden;
+    opacity: 0;
+}
+.menu.open {
+    transition: .2s visibility linear, .2s opacity linear;
+    visibility: visible;
+    opacity: 1;
+}
 @media (max-width: 1900px){
     /* button changed background color */
     .change__button {
