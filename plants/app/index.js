@@ -11,36 +11,31 @@ btnColor.onclick = function(){
 
 
 // для бургер меню из 4 полос где по нажатия всплывает окно навигации по сайту.
-const burgerMenu = document.querySelector('.burger__menu');
-burgerMenu.addEventListener("click", () => {
-    burgerMenu.classList.toggle('__active');
-    document.querySelector('.navigation').classList.toggle('__burger__menu')
+const burgerIcon = document.querySelector('.burger__menu');
+const burgerMenu = document.querySelector('.navigation')
+
+burgerIcon.addEventListener("click", () => {
+    burgerIcon.classList.toggle('__active');
+    document.querySelector('.navigation').classList.toggle('__burger__menu');
+});
+
+// при нажатии на Escape можно скрыть меню
+document.addEventListener('keydown', function(e) {
+    if(e.key === 'Escape' || e.key === 'Esc') { 
+        burgerMenu.classList.remove('__burger__menu');
+         burgerIcon.classList.remove('__active');
+    };
 });
 
 
-// будем скрывать режим бургер меню если кликать вне списка за его пределами.
-const btnMenu = document.querySelector(".btn__Menu");
-const menu = document.querySelector(".menu");
-const toggleMenu = function () {
-    menu.classList.toggle("open");
-}
 
-btnMenu.addEventListener("click", function (e) {
-    e.stopPropagation();
-    toggleMenu();
-});
-
-document.addEventListener("click", function (e) {
-    const target = e.target;
-    const its_menu = target == menu || menu.contains(target);
-    const its_btnMenu = target == btnMenu;
-    const menu_is_active = menu.classList.contains("open");
-
-    if (!its_menu && !its_btnMenu && menu_is_active) {
-        toggleMenu();
+// будем скрывать меню если кликать вне списка за его пределами.
+document.addEventListener('click', function(e) {
+    if (!burgerIcon.contains(e.target) && !burgerMenu.contains(e.target)){
+        burgerMenu.classList.remove('__burger__menu');
+        burgerIcon.classList.remove('__active');
     }
-});
-
+})
 
 // написать скрипт кнопки что будет возвращать пользователей к шапке по 
 // id="Header" и исчезать когда пользователь находится в верху страницы.
