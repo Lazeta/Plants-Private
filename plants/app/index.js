@@ -28,7 +28,6 @@ document.addEventListener('keydown', function(e) {
 });
 
 
-
 // будем скрывать меню если кликать вне списка за его пределами.
 document.addEventListener('click', function(e) {
     if (!burgerIcon.contains(e.target) && !burgerMenu.contains(e.target)){
